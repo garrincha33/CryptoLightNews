@@ -1,0 +1,10 @@
+workflows:
+    CryptoLightNews-workflow:
+        name: CryptoLightNews Pipeline
+        scripts:
+          - name: CICD Started
+            script: echo "Welcome to your CICD setup"
+        publishing:
+          email:
+            recipients:
+            - richyprice77@gmail.com
