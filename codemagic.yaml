@@ -7,4 +7,5 @@ workflows:
         publishing:
           email:
             recipients:
+        feature/RemoveStoryboard
             - richyprice77@gmail.com
