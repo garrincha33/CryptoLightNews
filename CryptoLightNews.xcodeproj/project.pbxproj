@@ -12,6 +12,7 @@
 		821AFC602949BAA2002E6078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821AFC5F2949BAA2002E6078 /* ViewController.swift */; };
 		821AFC652949BAA2002E6078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821AFC642949BAA2002E6078 /* Assets.xcassets */; };
 		821AFC682949BAA2002E6078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821AFC662949BAA2002E6078 /* LaunchScreen.storyboard */; };
+		827DD27B294BA043003E4D6F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD27A294BA043003E4D6F /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		821AFC642949BAA2002E6078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		821AFC672949BAA2002E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		821AFC692949BAA2002E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827DD27A294BA043003E4D6F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				821AFC5B2949BAA2002E6078 /* AppDelegate.swift */,
+				827DD27A294BA043003E4D6F /* MainTabBarController.swift */,
 				821AFC5D2949BAA2002E6078 /* SceneDelegate.swift */,
 				821AFC5F2949BAA2002E6078 /* ViewController.swift */,
 				821AFC642949BAA2002E6078 /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			files = (
 				821AFC602949BAA2002E6078 /* ViewController.swift in Sources */,
 				821AFC5C2949BAA2002E6078 /* AppDelegate.swift in Sources */,
+				827DD27B294BA043003E4D6F /* MainTabBarController.swift in Sources */,
 				821AFC5E2949BAA2002E6078 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
