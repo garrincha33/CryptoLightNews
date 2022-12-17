@@ -7,4 +7,7 @@ workflows:
         publishing:
           email:
             recipients:
+        feature/AddTabViewController
             - richyprice77@gmail.com
+
+
