@@ -29,4 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
-
+var AccessAPIKey: APIKeyable {
+    return Constants()
+}
