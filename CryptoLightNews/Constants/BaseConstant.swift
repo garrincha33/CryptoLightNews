@@ -8,27 +8,20 @@
 import Foundation
 import UIKit
 
-protocol APIKeyable {
-    var API_KEY: String { get }
-}
-var FULL_CRYPTO = "https://newsapi.org/v2/everything?q=crypto&sortBy=publishedAt&apiKey=\(AccessAPIKey.API_KEY)"
-
-var NEW_FULL_COINS = "https://api.coinlore.net/api/tickers/"
-
-class APIBase {
-    let dict: NSDictionary
-    init(resourceName: String) {
-        guard let filePath = Bundle.main.path(forResource: resourceName, ofType: "plist"), let plist = NSDictionary(contentsOfFile: filePath) else {
-            fatalError("unable to find \(resourceName) plist")
-        }
-        self.dict = plist
+enum Constants {
+  private static let resourceName = "ApiKey"
+  
+  private static var apiBase: NSDictionary {
+    guard let filePath = Bundle.main.path(forResource: resourceName, ofType: "plist"), let plist = NSDictionary(contentsOfFile: filePath) else {
+      fatalError("unable to find \(resourceName) plist")
     }
-}
-class Constants: APIBase, APIKeyable {
-    init() {
-        super.init(resourceName: "ApiKey")
-    }
-    var API_KEY: String {
-        dict.object(forKey: "API_KEY") as? String ?? ""
-    }
+    return plist
+  }
+  
+  private static var API_KEY: String {
+    Constants.apiBase.object(forKey: "API_KEY") as? String ?? ""
+  }
+  
+  static let fullCrytpo = "https://newsapi.org/v2/everything?q=crypto&sortBy=publishedAt&apiKey=\(Constants.API_KEY)"
+  static let newFullCoins = "https://api.coinlore.net/api/tickers/"
 }

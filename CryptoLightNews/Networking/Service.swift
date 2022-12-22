@@ -10,7 +10,6 @@ import Foundation
 class Serivce {
     static let shared = Serivce()
     typealias News = Result<SearchResults, CryptoNewsErrors>
-    let constants = Constants()
     
     func fetchNews(completion: @escaping (News) -> Void) {
         let urlString = CryptoNewsAPI.getNews

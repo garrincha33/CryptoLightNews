@@ -8,25 +8,29 @@
 import Foundation
 
 protocol APIBuilder {
-    var urlRequest: URLRequest { get }
-    var baseURL: URL { get }
+  var urlRequest: URLRequest { get }
+  var baseURL: URL { get }
 }
+
 enum CryptoNewsAPI: String {
-    case getNews
-    case getPrices
+  case getNews
+  case getPrices
 }
+
 extension CryptoNewsAPI: APIBuilder {
-    var baseURL: URL {
-        switch self {
-        case .getNews:
-            return URL(string: FULL_CRYPTO)!
-        case .getPrices:
-            return URL(string: NEW_FULL_COINS)!
-        }
+  
+  var baseURL: URL {
+    switch self {
+    case .getNews:
+      return URL(string: Constants.fullCrytpo)!
+    case .getPrices:
+      return URL(string: Constants.newFullCoins)!
     }
-    var urlRequest: URLRequest {
-        guard let url = URL(string: self.baseURL.absoluteString) else { fatalError("no url") }
-        print("\(url)")
-        return URLRequest(url: url)
-    }
+  }
+  
+  var urlRequest: URLRequest {
+    guard let url = URL(string: self.baseURL.absoluteString) else { fatalError("no url") }
+    print("\(url)")
+    return URLRequest(url: url)
+  }
 }
