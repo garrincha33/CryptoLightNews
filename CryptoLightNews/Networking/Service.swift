@@ -7,10 +7,9 @@
 
 import Foundation
 
-class Serivce {
-    static let shared = Serivce()
+class Service {
+    
     typealias News = Result<SearchResults, CryptoNewsErrors>
-    let constants = Constants()
     
     func fetchNews(completion: @escaping (News) -> Void) {
         let urlString = CryptoNewsAPI.getNews
@@ -28,12 +27,12 @@ class Serivce {
                 completion(.failure(CryptoNewsErrors.networkError))
             }
             guard let httpReponse = response as? HTTPURLResponse, (200...299).contains(httpReponse.statusCode) else {
-                print("no data from response")
+
                 completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
             guard let data = data else {
-                print("no data")
+
                 completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
@@ -49,5 +48,6 @@ class Serivce {
             }
         }
         task.resume()
-    } 
+    }
 }
+

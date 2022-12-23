@@ -19,9 +19,9 @@ extension CryptoNewsAPI: APIBuilder {
     var baseURL: URL {
         switch self {
         case .getNews:
-            return URL(string: FULL_CRYPTO)!
+            return URL(string: Constants.fullCrypto)!
         case .getPrices:
-            return URL(string: NEW_FULL_COINS)!
+            return URL(string: Constants.fullCoins)!
         }
     }
     var urlRequest: URLRequest {
