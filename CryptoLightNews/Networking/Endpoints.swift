@@ -8,7 +8,7 @@
 import Foundation
 
 protocol APIBuilder {
-    var urlRequest: URLRequest { get }
+
     var baseURL: URL { get }
 }
 enum CryptoNewsAPI: String {
@@ -24,9 +24,5 @@ extension CryptoNewsAPI: APIBuilder {
             return URL(string: Constants.fullCoins)!
         }
     }
-    var urlRequest: URLRequest {
-        guard let url = URL(string: self.baseURL.absoluteString) else { fatalError("no url") }
-        print("\(url)")
-        return URLRequest(url: url)
-    }
+
 }

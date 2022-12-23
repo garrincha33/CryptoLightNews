@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-
-
-
-
 enum Constants {
     
     private static let resourceName = "ApiKey"
@@ -25,9 +21,9 @@ enum Constants {
     
     private static var API_KEY: String {
         Constants.apiBase.object(forKey: "API_KEY") as? String ?? ""
-      }
+    }
     
     static let fullCrypto = "https://newsapi.org/v2/everything?q=crypto&sortBy=publishedAt&apiKey=\(Constants.API_KEY)"
-
+    
     static let fullCoins = "https://api.coinlore.net/api/tickers/"
 }

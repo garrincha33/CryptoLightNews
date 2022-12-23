@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Service {
+class TestService  {
     
     typealias News = Result<SearchResults, CryptoNewsErrors>
     
@@ -18,7 +18,7 @@ class Service {
     
     func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (Result<T, CryptoNewsErrors>) -> ()) {
         guard let url = URL(string: urlString) else {
-            completion(.failure(CryptoNewsErrors.urlError))
+            completion(.failure(CryptoNewsErrors.networkError))
             return
         }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -27,12 +27,12 @@ class Service {
                 completion(.failure(CryptoNewsErrors.networkError))
             }
             guard let httpReponse = response as? HTTPURLResponse, (200...299).contains(httpReponse.statusCode) else {
-                completion(.failure(CryptoNewsErrors.httpError))
+                completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
             guard let data = data else {
 
-                completion(.failure(CryptoNewsErrors.dataError))
+                completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
             do {

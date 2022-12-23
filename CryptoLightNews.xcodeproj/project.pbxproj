@@ -18,6 +18,7 @@
 		827DD29229531180003E4D6F /* NewsArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD29129531180003E4D6F /* NewsArticles.swift */; };
 		827DD295295311FA003E4D6F /* CryptoNewsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD294295311FA003E4D6F /* CryptoNewsErrors.swift */; };
 		827DD299295317A8003E4D6F /* ApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 827DD298295317A8003E4D6F /* ApiKey.plist */; };
+		82F51CDC295579CF0066E17F /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F51CDB295579CF0066E17F /* TestService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		827DD29129531180003E4D6F /* NewsArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticles.swift; sourceTree = "<group>"; };
 		827DD294295311FA003E4D6F /* CryptoNewsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoNewsErrors.swift; sourceTree = "<group>"; };
 		827DD298295317A8003E4D6F /* ApiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKey.plist; sourceTree = "<group>"; };
+		82F51CDB295579CF0066E17F /* TestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				827DD28529530D83003E4D6F /* Service.swift */,
 				827DD28B29530EBF003E4D6F /* Endpoints.swift */,
+				82F51CDB295579CF0066E17F /* TestService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F51CDC295579CF0066E17F /* TestService.swift in Sources */,
 				827DD295295311FA003E4D6F /* CryptoNewsErrors.swift in Sources */,
 				827DD29229531180003E4D6F /* NewsArticles.swift in Sources */,
 				821AFC5C2949BAA2002E6078 /* AppDelegate.swift in Sources */,
