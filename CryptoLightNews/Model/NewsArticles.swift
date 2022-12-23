@@ -12,7 +12,6 @@ struct NewsArticles: Codable {
     var url: String?
     var urlToImage: String?
     var author: String?
-    
 }
 struct SearchResults: Codable {
     let status: String

@@ -8,6 +8,11 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    
+    private enum Sizes {
+        static let tabInsets = UIEdgeInsets(top: 2, left: .zero, bottom: -2, right: .zero)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -41,7 +46,4 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = .systemGreen
         UINavigationBar.appearance().prefersLargeTitles = true
     }
-}
-enum Sizes {
-    static let tabInsets = UIEdgeInsets(top: 2, left: .zero, bottom: -2, right: .zero)
 }

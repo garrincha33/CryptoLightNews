@@ -12,27 +12,28 @@ class Service {
     typealias News = Result<SearchResults, CryptoNewsErrors>
     
     func fetchNews(completion: @escaping (News) -> Void) {
-        let urlString = CryptoNewsAPI.getNews
-        fetchGenericJSONData(urlString: urlString.rawValue, completion: completion)
-    }
-    
-    func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (Result<T, CryptoNewsErrors>) -> ()) {
+        let urlString = Constants.fullCrypto
         guard let url = URL(string: urlString) else {
-            completion(.failure(CryptoNewsErrors.urlError))
+            completion(.failure(CryptoNewsErrors.networkError))
+            print(urlString)
             return
         }
+        fetchGenericJSONData(url: url, completion: completion)
+    }
+    
+    private func fetchGenericJSONData<T: Decodable>(url: URL, completion: @escaping (Result<T, CryptoNewsErrors>) -> ()) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print(error)
                 completion(.failure(CryptoNewsErrors.networkError))
             }
             guard let httpReponse = response as? HTTPURLResponse, (200...299).contains(httpReponse.statusCode) else {
-                completion(.failure(CryptoNewsErrors.httpError))
+                completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
             guard let data = data else {
-
-                completion(.failure(CryptoNewsErrors.dataError))
+                
+                completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
             do {
@@ -49,4 +50,6 @@ class Service {
         task.resume()
     }
 }
+
+
 
