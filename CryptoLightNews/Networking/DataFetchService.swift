@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol Fetchable {
-    func fetchData()
-}
-
 class DataFetcherService {
     
     let networkService: Service
@@ -19,10 +15,3 @@ class DataFetcherService {
         self.networkService = networkService
     }
 }
-
-
-
-
-
-
-

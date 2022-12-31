@@ -32,7 +32,6 @@ class Service {
                 return
             }
             guard let data = data else {
-                
                 completion(.failure(CryptoNewsErrors.networkError))
                 return
             }
