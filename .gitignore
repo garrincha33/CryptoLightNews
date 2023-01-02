@@ -118,6 +118,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 
-Secrets/ApiKey
+Secrets/ApiKey.plist
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos
