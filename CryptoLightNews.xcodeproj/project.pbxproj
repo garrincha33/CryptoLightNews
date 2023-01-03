@@ -8,32 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		8218DBBC2955960C0031E87C /* DataFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218DBBB2955960C0031E87C /* DataFetchService.swift */; };
+		8218DBC929635E7F0031E87C /* ApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8218DBC829635E7F0031E87C /* ApiKey.plist */; };
 		821AFC5C2949BAA2002E6078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821AFC5B2949BAA2002E6078 /* AppDelegate.swift */; };
 		821AFC5E2949BAA2002E6078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821AFC5D2949BAA2002E6078 /* SceneDelegate.swift */; };
 		821AFC652949BAA2002E6078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821AFC642949BAA2002E6078 /* Assets.xcassets */; };
 		821AFC682949BAA2002E6078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821AFC662949BAA2002E6078 /* LaunchScreen.storyboard */; };
+		826324E329636110005D53A4 /* CryptoLightNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826324E229636110005D53A4 /* CryptoLightNewsTests.swift */; };
 		827DD27B294BA043003E4D6F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD27A294BA043003E4D6F /* MainTabBarController.swift */; };
 		827DD28629530D83003E4D6F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD28529530D83003E4D6F /* Service.swift */; };
 		827DD28F29530F9E003E4D6F /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD28E29530F9E003E4D6F /* BaseConstant.swift */; };
 		827DD29229531180003E4D6F /* NewsArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD29129531180003E4D6F /* NewsArticles.swift */; };
 		827DD295295311FA003E4D6F /* CryptoNewsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD294295311FA003E4D6F /* CryptoNewsErrors.swift */; };
-		827DD299295317A8003E4D6F /* ApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 827DD298295317A8003E4D6F /* ApiKey.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		826324E429636110005D53A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 821AFC502949BAA2002E6078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 821AFC572949BAA2002E6078;
+			remoteInfo = CryptoLightNews;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8218DBBB2955960C0031E87C /* DataFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchService.swift; sourceTree = "<group>"; };
+		8218DBC829635E7F0031E87C /* ApiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKey.plist; sourceTree = "<group>"; };
 		821AFC582949BAA2002E6078 /* CryptoLightNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoLightNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821AFC5B2949BAA2002E6078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		821AFC5D2949BAA2002E6078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		821AFC642949BAA2002E6078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		821AFC672949BAA2002E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		821AFC692949BAA2002E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826324E029636110005D53A4 /* CryptoLightNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoLightNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		826324E229636110005D53A4 /* CryptoLightNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoLightNewsTests.swift; sourceTree = "<group>"; };
 		827DD27A294BA043003E4D6F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		827DD28529530D83003E4D6F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		827DD28E29530F9E003E4D6F /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
 		827DD29129531180003E4D6F /* NewsArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticles.swift; sourceTree = "<group>"; };
 		827DD294295311FA003E4D6F /* CryptoNewsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoNewsErrors.swift; sourceTree = "<group>"; };
-		827DD298295317A8003E4D6F /* ApiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKey.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,15 +57,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		826324DD29636110005D53A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8218DBC729635E240031E87C /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				8218DBC829635E7F0031E87C /* ApiKey.plist */,
+			);
+			path = Secrets;
+			sourceTree = "<group>";
+		};
 		821AFC4F2949BAA2002E6078 = {
 			isa = PBXGroup;
 			children = (
-				82A5735E29533B9E00EEB943 /* Secrets */,
+				8218DBC729635E240031E87C /* Secrets */,
 				821AFC5B2949BAA2002E6078 /* AppDelegate.swift */,
 				821AFC5A2949BAA2002E6078 /* CryptoLightNews */,
+				826324E129636110005D53A4 /* CryptoLightNewsTests */,
 				821AFC592949BAA2002E6078 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				821AFC582949BAA2002E6078 /* CryptoLightNews.app */,
+				826324E029636110005D53A4 /* CryptoLightNewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +109,14 @@
 				821AFC692949BAA2002E6078 /* Info.plist */,
 			);
 			path = CryptoLightNews;
+			sourceTree = "<group>";
+		};
+		826324E129636110005D53A4 /* CryptoLightNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				826324E229636110005D53A4 /* CryptoLightNewsTests.swift */,
+			);
+			path = CryptoLightNewsTests;
 			sourceTree = "<group>";
 		};
 		827DD28129530C76003E4D6F /* Networking */ = {
@@ -122,14 +160,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		82A5735E29533B9E00EEB943 /* Secrets */ = {
-			isa = PBXGroup;
-			children = (
-				827DD298295317A8003E4D6F /* ApiKey.plist */,
-			);
-			path = Secrets;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +180,24 @@
 			productReference = 821AFC582949BAA2002E6078 /* CryptoLightNews.app */;
 			productType = "com.apple.product-type.application";
 		};
+		826324DF29636110005D53A4 /* CryptoLightNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 826324E829636110005D53A4 /* Build configuration list for PBXNativeTarget "CryptoLightNewsTests" */;
+			buildPhases = (
+				826324DC29636110005D53A4 /* Sources */,
+				826324DD29636110005D53A4 /* Frameworks */,
+				826324DE29636110005D53A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				826324E529636110005D53A4 /* PBXTargetDependency */,
+			);
+			name = CryptoLightNewsTests;
+			productName = CryptoLightNewsTests;
+			productReference = 826324E029636110005D53A4 /* CryptoLightNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,11 +205,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					821AFC572949BAA2002E6078 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					826324DF29636110005D53A4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 821AFC572949BAA2002E6078;
 					};
 				};
 			};
@@ -179,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				821AFC572949BAA2002E6078 /* CryptoLightNews */,
+				826324DF29636110005D53A4 /* CryptoLightNewsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -188,9 +241,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				827DD299295317A8003E4D6F /* ApiKey.plist in Resources */,
+				8218DBC929635E7F0031E87C /* ApiKey.plist in Resources */,
 				821AFC682949BAA2002E6078 /* LaunchScreen.storyboard in Resources */,
 				821AFC652949BAA2002E6078 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826324DE29636110005D53A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +272,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		826324DC29636110005D53A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826324E329636110005D53A4 /* CryptoLightNewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		826324E529636110005D53A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 821AFC572949BAA2002E6078 /* CryptoLightNews */;
+			targetProxy = 826324E429636110005D53A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		821AFC662949BAA2002E6078 /* LaunchScreen.storyboard */ = {
@@ -396,6 +472,44 @@
 			};
 			name = Release;
 		};
+		826324E629636110005D53A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMQAGMF379;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IssapTechnologies.CryptoLightNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoLightNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoLightNews";
+			};
+			name = Debug;
+		};
+		826324E729636110005D53A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMQAGMF379;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IssapTechnologies.CryptoLightNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoLightNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoLightNews";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +527,15 @@
 			buildConfigurations = (
 				821AFC6D2949BAA2002E6078 /* Debug */,
 				821AFC6E2949BAA2002E6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		826324E829636110005D53A4 /* Build configuration list for PBXNativeTarget "CryptoLightNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826324E629636110005D53A4 /* Debug */,
+				826324E729636110005D53A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
