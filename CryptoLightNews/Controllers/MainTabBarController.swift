@@ -29,7 +29,7 @@ class MainTabBarController: UITabBarController {
     }
     private func setupUI() {
         viewControllers = [
-            setupNavControllers(with: UIViewController(), title: "News", image: #imageLiteral(resourceName: "cryptoNews")),
+            setupNavControllers(with: NewsViewController(), title: "News", image: #imageLiteral(resourceName: "cryptoNews")),
             setupNavControllers(with: UIViewController(), title: "Prices", image: #imageLiteral(resourceName: "prices_new"))
         ]
     }

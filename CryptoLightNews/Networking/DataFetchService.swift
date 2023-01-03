@@ -10,6 +10,7 @@ import Foundation
 class DataFetcherService {
     
     let networkService: Service
+    var fetchNewsIsCalled = false
     
     init(networkService: Service) {
         self.networkService = networkService
