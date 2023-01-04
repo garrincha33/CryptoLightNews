@@ -12,7 +12,7 @@ class Service {
     typealias News = Result<SearchResults, CryptoNewsErrors>
 
     func fetchNews(completion: @escaping (News) -> Void) {
-        let urlString = "https://newsapi.org/v2/everything?q=tesla&from=2022-12-03&sortBy=publishedAt&apiKey=199e8836528a49c1848b82bd93e26341"
+        let urlString = Constants.fullCrypto
         guard let url = URL(string: urlString) else {
             completion(.failure(CryptoNewsErrors.networkError))
             print(urlString)

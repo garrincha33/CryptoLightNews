@@ -8,31 +8,36 @@
 import Foundation
 import UIKit
 
-class NewsViewController: UICollectionViewController {
+class NewsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var service = DataFetcherService(networkService: Service())
+    var service = DataFetcherService(networkService: Service.init())
     var items: [NewsArticles] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.dataSource = self
         SetupUI()
-
-
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.service.fetchNewsIsCalled = true
-        service.networkService.fetchNews { news in
-            
-
-            
-            
-        }
+        fetchData()
     }
     
     private func SetupUI() {
         collectionView.backgroundColor = .darkGray
         collectionView.register(CustomNewsControllerCell.self, forCellWithReuseIdentifier: String(describing: CustomNewsControllerCell.self))
+    }
+    
+    private func fetchData() {
+        service.networkService.fetchNews() { [weak self] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case.success(let news):
+                    self.items = news.articles
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     
@@ -46,5 +51,18 @@ class NewsViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (view.frame.width - 3 * 8) / 2 + 155
+        return CGSize(width: width, height: width - 70)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomNewsControllerCell.self), for: indexPath) as? CustomNewsControllerCell else {
+            return UICollectionViewCell()
+        }
+        cell.item = items[indexPath.item]
+        return cell
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NewsArticles: Codable {
+struct NewsArticles: Codable, Equatable {
     var title: String?
     var url: String?
     var urlToImage: String?

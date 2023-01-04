@@ -33,25 +33,50 @@ final class CryptoLightNewsTests: XCTestCase {
         let cell = CustomNewsControllerCell(frame: .zero)
         let item = NewsArticles(title: "test title")
         cell.item = item
-        XCTAssertEqual(cell.item?.title, item.title)
+        XCTAssertEqual(cell.item?.title, item.title)  
     }
     
-    func testArticleLabel() {
+    func testArticleLabelRendered() {
         let cell = CustomNewsControllerCell()
         XCTAssertNotNil(cell.articleLable)
-        XCTAssertEqual(cell.articleLable.textColor, .red)
+        XCTAssertEqual(cell.articleLable.textColor, .white)
+        XCTAssertEqual(cell.articleLable.textAlignment, .center)
+        XCTAssertEqual(cell.articleLable.translatesAutoresizingMaskIntoConstraints, false)
+        XCTAssertEqual(cell.articleLable.numberOfLines, -1)
     }
+
     func testCellForItem() {
         let indexPath = IndexPath(row: 0, section: 0)
-        let cell = viewController.collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomNewsControllerCell.self), for: indexPath)
+        let expected = NewsArticles(title: "test")
+        let cell =
+        
+        viewController.collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomNewsControllerCell.self), for: indexPath) as! CustomNewsControllerCell
+        cell.item = expected
         XCTAssertNotNil(cell)
-        XCTAssertTrue(cell is CustomNewsControllerCell)
+        XCTAssertEqual(cell.item, expected)
     }
     
     func testForNumberOfItemsInSection() {
         XCTAssertEqual(viewController.collectionView.numberOfItems(inSection: 0), viewController.items.count)
     }
-
+    
+    func testTitleContainerIsRendered() {
+        let cell = CustomNewsControllerCell()
+        XCTAssertNotNil(cell.titleContainer)
+    }
+    
+    func testTitleContainerSetupValues() {
+        let cell = CustomNewsControllerCell()
+        let titleContainer = cell.titleContainer
+        XCTAssertNotNil(titleContainer)
+        XCTAssertEqual(titleContainer.backgroundColor, UIColor.yellow)
+        XCTAssertEqual(titleContainer.translatesAutoresizingMaskIntoConstraints, false)
+        XCTAssertEqual(titleContainer.clipsToBounds, true)
+        XCTAssertEqual(titleContainer.layer.shadowRadius, 10)
+        XCTAssertEqual(titleContainer.layer.shadowOpacity, 0.5)
+        
+    }
+    
 }
 
 
