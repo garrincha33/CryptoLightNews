@@ -27,10 +27,12 @@ class CustomNewsControllerCell: UICollectionViewCell {
     var titleContainer: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .yellow
+        iv.alpha = 0.06
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.clipsToBounds = true
+        iv.layer.cornerRadius = 16
         iv.layer.shadowRadius = 10
-        iv.layer.shadowOpacity = 0.5
+        iv.layer.shadowOpacity = 0.2
         return iv
     }()
     
@@ -48,14 +50,20 @@ class CustomNewsControllerCell: UICollectionViewCell {
     }
     
     private func setupUI() {
+        addSubview(titleContainer)
+        titleContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        titleContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        titleContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        titleContainer.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        
         addSubview(articleLable)
-        articleLable.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        articleLable.topAnchor.constraint(equalTo: titleContainer.topAnchor).isActive = true
         articleLable.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         articleLable.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         articleLable.widthAnchor.constraint(equalToConstant: 100).isActive = true
         articleLable.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

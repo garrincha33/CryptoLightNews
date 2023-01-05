@@ -9,31 +9,26 @@ import XCTest
 
 @testable import CryptoLightNews
 
-
 final class CryptoLightNewsTests: XCTestCase {
     
     var viewController: NewsViewController!
-    // var mockAPIService: DataFetcherService!
     
     override func setUp() {
         super.setUp()
         viewController = NewsViewController()
-        //mockAPIService = DataFetcherService(networkService: Service.init())
-        //viewController.service = mockAPIService
         viewController.loadViewIfNeeded()
     }
     
     override func tearDown() {
         viewController = nil
-        //mockAPIService = nil
         super.setUp()
     }
     
     func testItemPropertyTitleWhenSet() {
         let cell = CustomNewsControllerCell(frame: .zero)
-        let item = NewsArticles(title: "test title")
+        let item = NewsArticles(title: makeTitle("test title"))
         cell.item = item
-        XCTAssertEqual(cell.item?.title, item.title)  
+        XCTAssertEqual(cell.item?.title, item.title)
     }
     
     func testArticleLabelRendered() {
@@ -44,12 +39,11 @@ final class CryptoLightNewsTests: XCTestCase {
         XCTAssertEqual(cell.articleLable.translatesAutoresizingMaskIntoConstraints, false)
         XCTAssertEqual(cell.articleLable.numberOfLines, -1)
     }
-
+    
     func testCellForItem() {
         let indexPath = IndexPath(row: 0, section: 0)
-        let expected = NewsArticles(title: "test")
+        let expected = NewsArticles(title: makeTitle("test"))
         let cell =
-        
         viewController.collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomNewsControllerCell.self), for: indexPath) as! CustomNewsControllerCell
         cell.item = expected
         XCTAssertNotNil(cell)
@@ -57,10 +51,10 @@ final class CryptoLightNewsTests: XCTestCase {
     }
     
     func testForNumberOfItemsInSection() {
-        XCTAssertEqual(viewController.collectionView.numberOfItems(inSection: 0), viewController.items.count)
+        XCTAssertEqual(viewController.numberOfItems, viewController.items.count)
     }
     
-    func testTitleContainerIsRendered() {
+    func testTitleContainerIsNotNil() {
         let cell = CustomNewsControllerCell()
         XCTAssertNotNil(cell.titleContainer)
     }
@@ -73,10 +67,18 @@ final class CryptoLightNewsTests: XCTestCase {
         XCTAssertEqual(titleContainer.translatesAutoresizingMaskIntoConstraints, false)
         XCTAssertEqual(titleContainer.clipsToBounds, true)
         XCTAssertEqual(titleContainer.layer.shadowRadius, 10)
-        XCTAssertEqual(titleContainer.layer.shadowOpacity, 0.5)
-        
+        XCTAssertEqual(titleContainer.layer.shadowOpacity, 0.2)
     }
     
+    func makeTitle(_ string: String) -> String {
+        string
+    }
+}
+
+private extension NewsViewController {
+    var numberOfItems: Int {
+        collectionView.numberOfItems(inSection: 0)
+    }
 }
 
 
