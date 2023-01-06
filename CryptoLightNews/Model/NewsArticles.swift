@@ -13,6 +13,7 @@ struct NewsArticles: Codable {
     var urlToImage: String?
     var author: String?
 }
+
 struct SearchResults: Codable {
     let status: String
     let totalResults: Int
