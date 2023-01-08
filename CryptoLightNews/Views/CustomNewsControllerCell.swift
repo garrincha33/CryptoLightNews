@@ -36,17 +36,17 @@ class CustomNewsControllerCell: UICollectionViewCell {
         return iv
     }()
     
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupUI()
     }
     
-    var item: NewsArticles? {
-        didSet {
-            articleLable.text = item?.title
-            
-        }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configuration(with viewModel: NewsArticles) {
+        articleLable.text = viewModel.title
     }
     
     private func setupUI() {
@@ -62,9 +62,5 @@ class CustomNewsControllerCell: UICollectionViewCell {
         articleLable.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         articleLable.widthAnchor.constraint(equalToConstant: 100).isActive = true
         articleLable.heightAnchor.constraint(equalToConstant: 100).isActive = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -13,7 +13,7 @@
 		821AFC5E2949BAA2002E6078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821AFC5D2949BAA2002E6078 /* SceneDelegate.swift */; };
 		821AFC652949BAA2002E6078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821AFC642949BAA2002E6078 /* Assets.xcassets */; };
 		821AFC682949BAA2002E6078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821AFC662949BAA2002E6078 /* LaunchScreen.storyboard */; };
-		826324E329636110005D53A4 /* CryptoLightNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826324E229636110005D53A4 /* CryptoLightNewsTests.swift */; };
+		826324E329636110005D53A4 /* NewsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826324E229636110005D53A4 /* NewsViewControllerTests.swift */; };
 		826324EA29637404005D53A4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826324E929637404005D53A4 /* NewsViewController.swift */; };
 		826324ED296443D0005D53A4 /* CustomNewsControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826324EC296443D0005D53A4 /* CustomNewsControllerCell.swift */; };
 		827DD27B294BA043003E4D6F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD27A294BA043003E4D6F /* MainTabBarController.swift */; };
@@ -21,6 +21,7 @@
 		827DD28F29530F9E003E4D6F /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD28E29530F9E003E4D6F /* BaseConstant.swift */; };
 		827DD29229531180003E4D6F /* NewsArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD29129531180003E4D6F /* NewsArticles.swift */; };
 		827DD295295311FA003E4D6F /* CryptoNewsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD294295311FA003E4D6F /* CryptoNewsErrors.swift */; };
+		82FDC91029671E5A00B9C036 /* CustomNewsControllerCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDC90F29671E5A00B9C036 /* CustomNewsControllerCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 		821AFC672949BAA2002E6078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		821AFC692949BAA2002E6078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826324E029636110005D53A4 /* CryptoLightNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoLightNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		826324E229636110005D53A4 /* CryptoLightNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoLightNewsTests.swift; sourceTree = "<group>"; };
+		826324E229636110005D53A4 /* NewsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewControllerTests.swift; sourceTree = "<group>"; };
 		826324E929637404005D53A4 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		826324EC296443D0005D53A4 /* CustomNewsControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsControllerCell.swift; sourceTree = "<group>"; };
 		827DD27A294BA043003E4D6F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		827DD28E29530F9E003E4D6F /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
 		827DD29129531180003E4D6F /* NewsArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticles.swift; sourceTree = "<group>"; };
 		827DD294295311FA003E4D6F /* CryptoNewsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoNewsErrors.swift; sourceTree = "<group>"; };
+		82FDC90F29671E5A00B9C036 /* CustomNewsControllerCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsControllerCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,8 @@
 		826324E129636110005D53A4 /* CryptoLightNewsTests */ = {
 			isa = PBXGroup;
 			children = (
-				826324E229636110005D53A4 /* CryptoLightNewsTests.swift */,
+				826324E229636110005D53A4 /* NewsViewControllerTests.swift */,
+				82FDC90F29671E5A00B9C036 /* CustomNewsControllerCellTests.swift */,
 			);
 			path = CryptoLightNewsTests;
 			sourceTree = "<group>";
@@ -292,7 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				826324E329636110005D53A4 /* CryptoLightNewsTests.swift in Sources */,
+				826324E329636110005D53A4 /* NewsViewControllerTests.swift in Sources */,
+				82FDC91029671E5A00B9C036 /* CustomNewsControllerCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

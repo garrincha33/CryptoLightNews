@@ -1,6 +1,6 @@
 //
-//  CryptoLightNewsTests.swift
-//  CryptoLightNewsTests
+//  NewsViewControllerTests.swift
+//  NewsViewControllerTests
 //
 //  Created by Richard Price on 02/01/2023.
 //
@@ -9,54 +9,35 @@ import XCTest
 
 @testable import CryptoLightNews
 
-final class CryptoLightNewsTests: XCTestCase {
+final class NewsViewControllerTests: XCTestCase {
     
     var viewController: NewsViewController!
+    var testService: DataFetcherService!
     
     override func setUp() {
         super.setUp()
         viewController = NewsViewController()
         viewController.loadViewIfNeeded()
+        testService = DataFetcherService(networkService: Service.init())
     }
     
     override func tearDown() {
         viewController = nil
-        super.setUp()
-    }
-    
-    func testItemPropertyTitleWhenSet() {
-        let cell = CustomNewsControllerCell(frame: .zero)
-        let item = NewsArticles(title: makeTitle("test title"))
-        cell.item = item
-        XCTAssertEqual(cell.item?.title, item.title)
-    }
-    
-    func testArticleLabelRendered() {
-        let cell = CustomNewsControllerCell()
-        XCTAssertNotNil(cell.articleLable)
-        XCTAssertEqual(cell.articleLable.textColor, .white)
-        XCTAssertEqual(cell.articleLable.textAlignment, .center)
-        XCTAssertEqual(cell.articleLable.translatesAutoresizingMaskIntoConstraints, false)
-        XCTAssertEqual(cell.articleLable.numberOfLines, -1)
+        super.tearDown()
     }
     
     func testCellForItem() {
         let indexPath = IndexPath(row: 0, section: 0)
-        let expected = NewsArticles(title: makeTitle("test"))
+        let newsArticle = NewsArticles(title: makeTitle("test"))
         let cell =
         viewController.collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomNewsControllerCell.self), for: indexPath) as! CustomNewsControllerCell
-        cell.item = expected
+        cell.configuration(with: newsArticle)
         XCTAssertNotNil(cell)
-        XCTAssertEqual(cell.item, expected)
+        XCTAssertEqual(cell.articleLable.text, newsArticle.title)
     }
     
     func testForNumberOfItemsInSection() {
         XCTAssertEqual(viewController.numberOfItems, viewController.items.count)
-    }
-    
-    func testTitleContainerIsNotNil() {
-        let cell = CustomNewsControllerCell()
-        XCTAssertNotNil(cell.titleContainer)
     }
     
     func testTitleContainerSetupValues() {

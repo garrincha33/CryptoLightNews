@@ -10,7 +10,7 @@ import Foundation
 class Service {
     
     typealias News = Result<SearchResults, CryptoNewsErrors>
-
+    
     func fetchNews(completion: @escaping (News) -> Void) {
         let urlString = Constants.fullCrypto
         guard let url = URL(string: urlString) else {

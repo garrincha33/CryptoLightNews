@@ -12,7 +12,7 @@ class MainTabBarController: UITabBarController {
     private enum Sizes {
         static let tabInsets = UIEdgeInsets(top: 2, left: .zero, bottom: -2, right: .zero)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -20,6 +20,7 @@ class MainTabBarController: UITabBarController {
         updateTabColorScheme()
         view.backgroundColor = .darkGray
     }
+    
     private func setupNavControllers(with rootViewController: UIViewController, title: String, image: UIImage) -> UINavigationController {
         let navController = UINavigationController(rootViewController: rootViewController)
         rootViewController.title = title
@@ -27,12 +28,14 @@ class MainTabBarController: UITabBarController {
         navController.tabBarItem.image = image
         return navController
     }
+    
     private func setupUI() {
         viewControllers = [
             setupNavControllers(with: NewsViewController(), title: "News", image: #imageLiteral(resourceName: "cryptoNews")),
             setupNavControllers(with: UIViewController(), title: "Prices", image: #imageLiteral(resourceName: "prices_new"))
         ]
     }
+    
     private func updateTabInsects() {
         guard let items = tabBar.items else {return}
         for item in items {
@@ -40,6 +43,7 @@ class MainTabBarController: UITabBarController {
             item.imageInsets = Sizes.tabInsets
         }
     }
+    
     private func updateTabColorScheme() {
         tabBar.isTranslucent = true
         tabBar.barTintColor = .clear
