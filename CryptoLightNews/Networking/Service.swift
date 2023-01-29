@@ -10,6 +10,7 @@ import Foundation
 class Service {
     
     typealias News = Result<SearchResults, CryptoNewsErrors>
+    typealias Coins = Result<SearchResultsCoins, CryptoNewsErrors>
     
     func fetchNews(completion: @escaping (News) -> Void) {
         let urlString = Constants.fullCrypto
