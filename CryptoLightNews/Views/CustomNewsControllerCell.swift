@@ -45,7 +45,7 @@ class CustomNewsControllerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configuration(with viewModel: NewsArticles) {
+    func configuration(with viewModel: Article) {
         articleLable.text = viewModel.title
     }
     
