@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoinsModel: Codable {
+struct Coin: Codable {
     var name: String?
     var symbol: String?
     var rank: Int?
@@ -19,6 +19,6 @@ struct CoinsModel: Codable {
     var percent_change_7d: String?
 }
 
-struct SearchResultsCoins: Codable {
-    let data: [CoinsModel]
+struct Coins: Codable {
+    let coins: [Coin]
 }

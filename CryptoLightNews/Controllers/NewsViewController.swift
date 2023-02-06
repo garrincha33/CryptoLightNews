@@ -20,7 +20,7 @@ class NewsViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     var service = DataFetcherService(networkService: Service.init())
-    var items: [NewsArticles] = []
+    var items: [Article] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

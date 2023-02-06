@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct NewsArticles: Codable {
+struct Article: Codable {
     var title: String?
     var url: String?
     var urlToImage: String?
     var author: String?
 }
-struct SearchResults: Codable {
+struct Articles: Codable {
     let status: String
     let totalResults: Int
-    let articles: [NewsArticles]
+    let articles: [Article]
 }

@@ -9,10 +9,10 @@ import Foundation
 
 class Service {
     
-    typealias News = Result<SearchResults, CryptoNewsErrors>
-    typealias Coins = Result<SearchResultsCoins, CryptoNewsErrors>
+    typealias ResultNews = Result<Articles, CryptoNewsErrors>
+    typealias ResultCoins = Result<Coins, CryptoNewsErrors>
     
-    func fetchNews(completion: @escaping (News) -> Void) {
+    func fetchNews(completion: @escaping (ResultNews) -> Void) {
         let urlString = Constants.fullCrypto
         guard let url = URL(string: urlString) else {
             completion(.failure(CryptoNewsErrors.networkError))
